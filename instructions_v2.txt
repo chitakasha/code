@@ -1,0 +1,64 @@
+# instructions_v2.txt
+
+# Root directories
+DIR Q-Doc
+DIR C-Doc
+DIR Q-Core
+DIR C-Core
+DIR Data
+DIR Tests
+DIR Utils
+DIR Config
+DIR Quantum_Computing
+DIR Classical_Computing
+DIR Data_Science
+DIR Artificial_Intelligence
+DIR Machine_Learning
+DIR ChitAkasha_WakeUp
+DIR Networking
+DIR Security
+DIR UI_UX
+DIR DevOps
+
+# Subdirectories and files for new modules
+## Quantum Computing
+DIR Quantum_Computing/QC-Intro
+FILE Quantum_Computing/QC-Intro/DocQC-Intro.md
+
+## Classical Computing
+DIR Classical_Computing/CC-Intro
+FILE Classical_Computing/CC-Intro/DocCC-Intro.md
+
+## Data Science
+DIR Data_Science/DS-Intro
+FILE Data_Science/DS-Intro/DocDS-Intro.md
+
+## Artificial Intelligence
+DIR Artificial_Intelligence/AI-Intro
+FILE Artificial_Intelligence/AI-Intro/DocAI-Intro.md
+
+## Machine Learning
+DIR Machine_Learning/ML-Intro
+FILE Machine_Learning/ML-Intro/DocML-Intro.md
+
+## ChitAkasha WakeUp
+DIR ChitAkasha_WakeUp/Scripts
+FILE ChitAkasha_WakeUp/Scripts/ChitAkasha_WakeUp.py
+
+## Networking
+DIR Networking/Net-Intro
+FILE Networking/Net-Intro/DocNet-Intro.md
+
+## Security
+DIR Security/Sec-Intro
+FILE Security/Sec-Intro/DocSec-Intro.md
+
+## UI/UX
+DIR UI_UX/UI-Intro
+FILE UI_UX/UI-Intro/DocUI-Intro.md
+
+## DevOps
+DIR DevOps/DevOps-Intro
+FILE DevOps/DevOps-Intro/DocDevOps-Intro.md
+
+# ... (continue to add more directories and files as needed)
