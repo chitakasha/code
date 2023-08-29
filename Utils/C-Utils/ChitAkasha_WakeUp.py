@@ -1,13 +1,13 @@
+#!/usr/bin/env python3
+
 # description: This file serves as the Classical wake-up routine for the ChitAkasha project.
 # It initializes modules, clears temporary data, and prepares the system for a new day.
 
-#!/usr/bin/env python3
-
 import os
 import shutil
-from readme_generator import generate_readme
-from chatgpt_api_integration import fill_readme_with_chatgpt
-from recombinantai_validation import validate_readme_with_recombinantai
+from readme_generator import generate_readme  # Make sure this module exists
+from chatgpt_api_integration import fill_readme_with_chatgpt  # Make sure this module exists
+from recombinantai_validation import validate_readme_with_recombinantai  # Make sure this module exists
 
 def ChitAkasha_WakeUp():
     """
@@ -17,12 +17,10 @@ def ChitAkasha_WakeUp():
     
     # Initialize Quantum Modules
     print("Initializing Quantum Modules...")
-    # Your quantum initialization code here
     initialize_quantum_modules()
     
     # Initialize Classical Modules
     print("Initializing Classical Modules...")
-    # Your classical initialization code here
     initialize_classical_modules()
     
     # Clear Temporary Data
@@ -59,11 +57,10 @@ def clear_temp_data():
     """
     Clear the temporary data.
     """
-    temp_dir = "path/to/temporary/data"
+    temp_dir = "/path/to/temporary/data"  # Specify the actual path
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir)
 
 if __name__ == "__main__":
     ChitAkasha_WakeUp()
-
