@@ -1,3 +1,6 @@
+Certainly! Below is a sample Python script that you can use as the content for `Utils/Q-Utils/Q-QuantumUtils.qpy`. This script includes utility functions that could be useful for quantum operations in the ChitAkasha project.
+
+```python
 #!/usr/bin/env python3
 
 import qiskit
@@ -70,3 +73,8 @@ if __name__ == "__main__":
     counts = result.get_counts(qc)
     print("Counts:", counts)
     plot_histogram(counts).show()
+```
+
+This script includes utility functions for initializing a quantum circuit, applying Hadamard and CNOT gates, measuring qubits, and executing the circuit. It also includes an example usage section that demonstrates how to use these utility functions.
+
+Feel free to modify this script to better suit the specific needs of the ChitAkasha project. Would you like to proceed with anything else?
