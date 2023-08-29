@@ -3,6 +3,8 @@
 # description: This file serves as the Classical wake-up routine for the ChitAkasha project.
 # It initializes modules, clears temporary data, and prepares the system for a new day.
 
+import getpass  # for secure password input
+
 import os
 import shutil
 from readme_generator import generate_readme  # Make sure this module exists
@@ -14,6 +16,14 @@ def ChitAkasha_WakeUp():
     This function serves as the wake-up routine for the ChitAkasha project.
     It initializes modules, clears temporary data, and prepares the system for a new day.
     """
+
+    # Check for ChatGPT API key in environment variables
+    chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
+    
+    # If not found, prompt the user to enter it
+    if chatgpt_api_key is None:
+        chatgpt_api_key = getpass.getpass("Please enter your ChatGPT API key: ")
+        os.environ["CHATGPT_API_KEY"] = chatgpt_api_key  # set the environment variable
     
     # Initialize Quantum Modules
     print("Initializing Quantum Modules...")
