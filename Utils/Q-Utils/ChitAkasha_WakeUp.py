@@ -1,13 +1,10 @@
-# This file contains the wake-up routine for the ChitAkasha project.
-# It initializes modules, clears temporary data, and prepares the system for a new day.
-# It is called by the ChitAkasha_WakeUp.sh script.
-# It is also called by the ChitAkasha_WakeUp.py script in the ChitAkasha_CCore module.
-
 #!/usr/bin/env python3
 
 import os
 import shutil
 import json
+
+
 
 def ChitAkasha_WakeUp():
     """

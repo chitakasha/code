@@ -1,10 +1,10 @@
-# description: This file serves as the Classical wake-up routine for the ChitAkasha project.
-# It initializes modules, clears temporary data, and prepares the system for a new day.
-
-#!/usr/bin/env python3
 
 import os
 import shutil
+import readme_generator
+import chatgpt_api_integration
+import recombinantai_validation
+
 from readme_generator import generate_readme
 from chatgpt_api_integration import fill_readme_with_chatgpt
 from recombinantai_validation import validate_readme_with_recombinantai
@@ -59,7 +59,7 @@ def clear_temp_data():
     """
     Clear the temporary data.
     """
-    temp_dir = "path/to/temporary/data"
+    temp_dir = "TempData/"
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir)
