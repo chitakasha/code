@@ -10,7 +10,7 @@ def generate_readme():
     """
     
     # Define the root directory from where to start generating README files
-    root_dir = "/path/to/ChitAkasha/project"  # Specify the actual path
+    root_dir = "/workspaces/code"  # Specify the actual path based on your project structure
     
     # Loop through each directory and sub-directory to generate README.md files
     for dirpath, dirnames, filenames in os.walk(root_dir):
@@ -26,7 +26,7 @@ def generate_readme():
             
             # Write the header and description
             readme_file.write(f"# {os.path.basename(dirpath)}\n")
-            readme_file.write("This directory contains modules related to " + os.path.basename(dirpath) + ".\n")
+            readme_file.write(f"This directory contains modules related to {os.path.basename(dirpath)}.\n")
             
             # Optionally, you can call ChatGPT API here to generate more content
             
