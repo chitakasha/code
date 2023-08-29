@@ -1,31 +1,36 @@
+#!/usr/bin/env python3
+
+# description: This script generates README.md files for each directory in the ChitAkasha project.
+
 import os
 
 def generate_readme():
     """
-    This function traverses the directory structure and generates a README.md file
-    in each directory that doesn't have one, based on a README_template.md.
+    This function generates README.md files for each directory in the ChitAkasha project.
     """
-    root_dir = '.'  # Starting directory, you can change this to your project's root directory
     
-    # Read the README_template.md file
-    with open('README_template.md', 'r') as f:
-        readme_template = f.read()
+    # Define the root directory from where to start generating README files
+    root_dir = "/path/to/ChitAkasha/project"  # Specify the actual path
     
-    # Traverse directory structure
+    # Loop through each directory and sub-directory to generate README.md files
     for dirpath, dirnames, filenames in os.walk(root_dir):
         
-        # Skip hidden directories
-        dirnames[:] = [d for d in dirnames if not d.startswith('.')]
+        # Skip directories that already have a README.md file
+        if "README.md" in filenames:
+            continue
         
-        # Check if README.md exists
-        if 'README.md' not in filenames:
-            readme_path = os.path.join(dirpath, 'README.md')
+        # Generate README.md file for the directory
+        readme_path = os.path.join(dirpath, "README.md")
+        
+        with open(readme_path, "w") as readme_file:
             
-            # Generate README.md based on the template
-            with open(readme_path, 'w') as f:
-                f.write(readme_template)
+            # Write the header and description
+            readme_file.write(f"# {os.path.basename(dirpath)}\n")
+            readme_file.write("This directory contains modules related to " + os.path.basename(dirpath) + ".\n")
             
-            print(f"Generated README.md in {dirpath}")
+            # Optionally, you can call ChatGPT API here to generate more content
+            
+            print(f"Generated README.md for {dirpath}")
 
 if __name__ == "__main__":
     generate_readme()
