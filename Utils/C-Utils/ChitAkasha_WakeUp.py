@@ -1,13 +1,13 @@
-# This file contains the wake-up routine for the ChitAkasha project.
+# description: This file serves as the Classical wake-up routine for the ChitAkasha project.
 # It initializes modules, clears temporary data, and prepares the system for a new day.
-# It is called by the ChitAkasha_WakeUp.sh script.
-# It is also called by the ChitAkasha_WakeUp.py script in the ChitAkasha_CCore module.
 
 #!/usr/bin/env python3
 
 import os
 import shutil
-import json
+from readme_generator import generate_readme
+from chatgpt_api_integration import fill_readme_with_chatgpt
+from recombinantai_validation import validate_readme_with_recombinantai
 
 def ChitAkasha_WakeUp():
     """
@@ -29,15 +29,17 @@ def ChitAkasha_WakeUp():
     print("Clearing Temporary Data...")
     clear_temp_data()
     
-    # Set Initial States for Quantum Modules
-    print("Setting Initial States for Quantum Modules...")
-    # Your quantum state setting code here
-    set_initial_states_for_quantum_modules()
+    # Generate README files
+    print("Generating README files...")
+    generate_readme()
     
-    # Run Unit Tests to Validate System Integrity
-    print("Running Unit Tests...")
-    # Your unit test code here
-    run_unit_tests()
+    # Fill README files with ChatGPT
+    print("Filling README files with ChatGPT...")
+    fill_readme_with_chatgpt()
+    
+    # Validate README files with RecombinantAI
+    print("Validating README files with RecombinantAI...")
+    validate_readme_with_recombinantai()
     
     print("ChitAkasha is now awake and ready for a new day!")
 
@@ -62,18 +64,6 @@ def clear_temp_data():
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir)
 
-def set_initial_states_for_quantum_modules():
-    """
-    Set the initial states for the quantum modules.
-    """
-    # Your code here
-    
-
-def run_unit_tests():
-    """
-    Run the unit tests to validate the system integrity.
-    """
-    # Your code here
-
 if __name__ == "__main__":
     ChitAkasha_WakeUp()
+
