@@ -68,7 +68,7 @@ def clear_temp_data():
     """
     Clear the temporary data.
     """
-    temp_dir = "/workspaces/code/Utils/TempData"  # Specify the actual path
+
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir)
