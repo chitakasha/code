@@ -12,9 +12,6 @@ def fill_readme_with_chatgpt():
     
     # Retrieve the ChatGPT API key from an environment variable
     chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
-    if chatgpt_api_key is None:
-        print("Error: CHATGPT_API_KEY environment variable not set.")
-        return
     
     # Define the API endpoint and headers
     api_endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
@@ -22,8 +19,12 @@ def fill_readme_with_chatgpt():
         "Authorization": f"Bearer {chatgpt_api_key}"
     }
     
+    # Read the README_template.md file
+    with open("/workspaces/code/Utils/C-Utils/README_template.md", "r") as template_file:
+        template_content = template_file.read()
+    
     # Loop through each directory to fill README.md files
-    root_dir = "/path/to/ChitAkasha/project"  # Specify the actual path
+    root_dir = "/workspaces/code"  # Specify the actual path based on your project structure
     
     for dirpath, dirnames, filenames in os.walk(root_dir):
         
@@ -34,7 +35,7 @@ def fill_readme_with_chatgpt():
         # Generate content using ChatGPT API
         readme_path = os.path.join(dirpath, "README.md")
         
-        prompt = f"Explain the role and structure of the {os.path.basename(dirpath)} module."
+        prompt = f"{template_content}\nExplain the role and structure of the {os.path.basename(dirpath)} module."
         payload = {
             "prompt": prompt,
             "max_tokens": 100
@@ -45,7 +46,6 @@ def fill_readme_with_chatgpt():
         
         # Append the generated content to README.md
         with open(readme_path, "a") as readme_file:
-            readme_file.write("\n## Role and Structure\n")
             readme_file.write(generated_text)
             
             print(f"Filled README.md for {dirpath} with ChatGPT generated content.")
