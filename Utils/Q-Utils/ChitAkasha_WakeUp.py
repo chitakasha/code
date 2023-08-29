@@ -1,3 +1,8 @@
+# This file contains the wake-up routine for the ChitAkasha project.
+# It initializes modules, clears temporary data, and prepares the system for a new day.
+# It is called by the ChitAkasha_WakeUp.sh script.
+# It is also called by the ChitAkasha_WakeUp.py script in the ChitAkasha_CCore module.
+
 #!/usr/bin/env python3
 
 import os
@@ -62,6 +67,7 @@ def set_initial_states_for_quantum_modules():
     Set the initial states for the quantum modules.
     """
     # Your code here
+    
 
 def run_unit_tests():
     """

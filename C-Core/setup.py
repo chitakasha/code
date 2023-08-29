@@ -1,3 +1,5 @@
+# This file is part of the ChitAkasha Project
+
 from setuptools import setup, find_packages
 
 setup(
