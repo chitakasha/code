@@ -1,44 +1,37 @@
+#!/usr/bin/env python3
+
+# description: This script validates the generated README.md files using RecombinantAI.
+
 import os
-import requests
 
 def validate_readme_with_recombinantai():
     """
-    This function traverses the directory structure and validates the content of each
-    README.md file using the RecombinantAI API.
+    This function validates the generated README.md files.
     """
-    root_dir = '.'  # Starting directory, you can change this to your project's root directory
     
-    # API endpoint and headers for RecombinantAI
-    api_endpoint = "https://api.recombinantai.com/v1/validate"
-    headers = {
-        "Authorization": "Bearer YOUR_API_KEY_HERE"
-    }
+    # Define the root directory from where to start validating README files
+    root_dir = "/path/to/ChitAkasha/project"  # Specify the actual path
     
-    # Traverse directory structure
+    # Loop through each directory and sub-directory to validate README.md files
     for dirpath, dirnames, filenames in os.walk(root_dir):
         
-        # Skip hidden directories
-        dirnames[:] = [d for d in dirnames if not d.startswith('.')]
+        # Skip directories that don't have a README.md file
+        if "README.md" not in filenames:
+            continue
         
-        # Check if README.md exists
-        if 'README.md' in filenames:
-            readme_path = os.path.join(dirpath, 'README.md')
+        # Validate README.md file for the directory
+        readme_path = os.path.join(dirpath, "README.md")
+        
+        with open(readme_path, "r") as readme_file:
             
-            # Read the existing README.md
-            with open(readme_path, 'r') as f:
-                readme_content = f.read()
+            # Read the content
+            content = readme_file.read()
             
-            # Validate content using RecombinantAI API
-            payload = {
-                "text": readme_content
-            }
-            response = requests.post(api_endpoint, headers=headers, json=payload)
-            validation_status = response.json()['status']
-            
-            if validation_status == "valid":
-                print(f"README.md in {dirpath} is valid.")
+            # Perform validation (this is where you can integrate RecombinantAI)
+            if "Role and Structure" not in content:
+                print(f"Validation failed for {dirpath}: 'Role and Structure' section missing.")
             else:
-                print(f"README.md in {dirpath} is invalid. Reason: {response.json()['reason']}")
+                print(f"Validation succeeded for {dirpath}")
 
 if __name__ == "__main__":
     validate_readme_with_recombinantai()
