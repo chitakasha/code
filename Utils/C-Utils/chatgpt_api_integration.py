@@ -43,7 +43,7 @@ def fill_readme_with_chatgpt():
         
         # Prepare the payload for the API call
         prompt = f"Please generate and return the most appropriate content for the {readme_path} file in accordance with the template provided and the logic of ChitAkasha data structure and common sense. The contents of this readme file will be further used to develop modules and components of ChitAkasha quantum computing system. Template: {template_content}"
-        payload = {"model": "gpt-4", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": prompt}]}
+        payload = {"model": "gpt-4-0613", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": prompt}]}
         
         # Make the API call
         response = requests.post(api_endpoint, headers=headers, json=payload)
