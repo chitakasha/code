@@ -1,0 +1,47 @@
+# instructions.txt
+
+# Root directories
+DIR Q-Doc
+DIR C-Doc
+DIR Q-Core
+DIR C-Core
+DIR Data
+DIR Tests
+DIR Utils
+DIR Config
+
+# Subdirectories and files
+DIR Q-Doc/Q-Intro
+FILE Q-Doc/Q-Intro/DocQ-Intro.md
+FILE Q-Doc/Q-Intro/DocQ-Installation.md
+
+DIR C-Doc/C-Intro
+FILE C-Doc/C-Intro/DocC-Intro.md
+FILE C-Doc/C-Intro/DocC-Installation.md
+
+DIR Q-Core/Nano
+FILE Q-Core/Nano/Q-ObsNanoState1.0.qpy
+
+DIR C-Core/Macro
+FILE C-Core/Macro/C-EntMacro~Super.cpy
+
+DIR Data/Q-DataNano
+FILE Data/Q-DataNano/Q-NanoDataSet1.0
+
+DIR Data/C-DataMacro
+FILE Data/C-DataMacro/C-MacroDataSet1.0
+
+DIR Tests/Q-Tests
+FILE Tests/Q-Tests/Q-ObsNanoStateTest.qpy
+
+DIR Tests/C-Tests
+FILE Tests/C-Tests/C-EntMacroTest.cpy
+
+DIR Utils/Q-Utils
+FILE Utils/Q-Utils/Q-QuantumUtils.qpy
+
+DIR Utils/C-Utils
+FILE Utils/C-Utils/C-ClassicalUtils.cpy
+
+FILE Config/Q-Config.qpy
+FILE Config/C-Config.cpy
