@@ -14,7 +14,7 @@ def fill_readme_with_chatgpt():
     chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
     
     # Define the API endpoint and headers
-    api_endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
+    api_endpoint = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {chatgpt_api_key}"
     }
