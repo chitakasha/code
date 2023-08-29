@@ -3,10 +3,9 @@
 # description: This file serves as the Classical wake-up routine for the ChitAkasha project.
 # It initializes modules, clears temporary data, and prepares the system for a new day.
 
-import getpass  # for secure password input
-
 import os
 import shutil
+import getpass  # for secure password input
 from readme_generator import generate_readme  # Make sure this module exists
 from chatgpt_api_integration import fill_readme_with_chatgpt  # Make sure this module exists
 from recombinantai_validation import validate_readme_with_recombinantai  # Make sure this module exists
@@ -16,7 +15,7 @@ def ChitAkasha_WakeUp():
     This function serves as the wake-up routine for the ChitAkasha project.
     It initializes modules, clears temporary data, and prepares the system for a new day.
     """
-
+    
     # Check for ChatGPT API key in environment variables
     chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
     
@@ -55,19 +54,21 @@ def initialize_quantum_modules():
     """
     Initialize the quantum modules.
     """
-    # Your code here
+    # Your real code here
+    print("Quantum modules initialized.")
 
 def initialize_classical_modules():
     """
     Initialize the classical modules.
     """
-    # Your code here
+    # Your real code here
+    print("Classical modules initialized.")
 
 def clear_temp_data():
     """
     Clear the temporary data.
     """
-    temp_dir = "/path/to/temporary/data"  # Specify the actual path
+    temp_dir = "/workspaces/code/Utils/TempData"  # Specify the actual path
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
     os.makedirs(temp_dir)
