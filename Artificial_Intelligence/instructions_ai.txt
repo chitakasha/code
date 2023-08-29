@@ -1,0 +1,56 @@
+# instructions_ai.txt
+
+# Root directories
+DIR AI-Intro
+DIR Machine_Learning
+DIR Natural_Language_Processing
+DIR Computer_Vision
+DIR Reinforcement_Learning
+DIR Utils
+DIR Tests
+DIR Data
+DIR Config
+
+# Subdirectories and files for AI-Intro
+DIR AI-Intro/Docs
+FILE AI-Intro/Docs/DocAI-Intro.md
+FILE AI-Intro/Docs/DocAI-Installation.md
+
+# Subdirectories and files for Machine_Learning
+DIR Machine_Learning/Models
+DIR Machine_Learning/Data
+FILE Machine_Learning/Models/ML_Model1.py
+FILE Machine_Learning/Data/ML_DataSet1.csv
+
+# Subdirectories and files for Natural_Language_Processing
+DIR Natural_Language_Processing/Models
+DIR Natural_Language_Processing/Data
+FILE Natural_Language_Processing/Models/NLP_Model1.py
+FILE Natural_Language_Processing/Data/NLP_DataSet1.txt
+
+# Subdirectories and files for Computer_Vision
+DIR Computer_Vision/Models
+DIR Computer_Vision/Data
+FILE Computer_Vision/Models/CV_Model1.py
+FILE Computer_Vision/Data/CV_DataSet1.jpg
+
+# Subdirectories and files for Reinforcement_Learning
+DIR Reinforcement_Learning/Models
+DIR Reinforcement_Learning/Data
+FILE Reinforcement_Learning/Models/RL_Model1.py
+FILE Reinforcement_Learning/Data/RL_DataSet1.json
+
+# Subdirectories and files for Utils
+DIR Utils/AI_Utils
+FILE Utils/AI_Utils/AI_Utils.py
+
+# Subdirectories and files for Tests
+DIR Tests/AI_Tests
+FILE Tests/AI_Tests/AI_Test1.py
+
+# Subdirectories and files for Data
+DIR Data/AI_Data
+FILE Data/AI_Data/AI_DataSet1.csv
+
+# Subdirectories and files for Config
+FILE Config/AI_Config.json
